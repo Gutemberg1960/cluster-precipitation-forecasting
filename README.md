@@ -50,7 +50,8 @@ python src/estimate_uncertainty.py
 
 ## Dataset Access
 
-A sample of the dataset (`sample_glob_1993_2023.xlsx`) is provided for testing.
+The full dataset used in this study is available in the `data/` directory of this repository:  
+**`data/glob_1993_2023.xlsx`**
 
 To access the full dataset, please contact:
 
