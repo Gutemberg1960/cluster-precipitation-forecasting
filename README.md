@@ -7,9 +7,8 @@ This project presents a methodology to forecast monthly precipitation over the P
 
 All files are located in the **root directory** of this repository:
 
-- `train_models_by_cluster.py`: Trains multiple ML models per cluster, performs bias correction, and saves evaluation metrics and figures.
-- `estimate_uncertainty_by_cluster.py`: Estimates forecast uncertainty for each cluster using a secondary model to predict the squared training residuals.
-- `plot_test_residuals_distribution.py`: Plots the distribution of test residuals with a Gaussian fit per cluster.
+- `train_cluster_models.py`: Trains multiple ML models per cluster, performs bias correction, and saves evaluation metrics and figures.
+- `estimate_uncertainty.py`: Estimates forecast uncertainty for each cluster using a secondary model to predict the squared training residuals.
 - `glob_1993_2023.xlsx`: Full historical dataset (1993–2023) with predictor variables and target monthly precipitation, already clustered.
 
 ## How to Run the Scripts
@@ -23,19 +22,13 @@ pip install pandas numpy matplotlib openpyxl scikit-learn xgboost lightgbm scipy
 2. **Run model training and evaluation**:
 
 ```bash
-python train_models_by_cluster.py
+python train_cluster_models.py
 ```
 
 3. **Estimate forecast uncertainty per cluster**:
 
 ```bash
-python estimate_uncertainty_by_cluster.py
-```
-
-4. **Plot residual histograms for each cluster**:
-
-```bash
-python plot_test_residuals_distribution.py
+python estimate_uncertainty.py
 ```
 
 ## Dataset Access
